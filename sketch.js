@@ -6,8 +6,7 @@ let imgDetections;
 let detections;
 let mode = 0;
 let w = 640;
-let h = 480;
-let videoImg;
+let h = 480; 
 
 const options = {
     withLandmarks: true,
@@ -99,7 +98,7 @@ let s2 = (s) => {
     };
     s.draw = () => {
         s.background(255);
-        s.image(video, 0, 0, 640, 480)
+        s.image(video.get(), 0, 0)
         if (detections != undefined && detections.length > 0) {
             for (let i = 0; i < detections.length; i++) {
                 const Rect = detections[i].alignedRect;
